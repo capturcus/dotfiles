@@ -50,6 +50,7 @@ imap <C-BS> <C-W>
 
 " ycm
 let g:ycm_server_python_interpreter = '/usr/bin/python'
+autocmd CompleteDone * pclose
 
 "ctrlp
 let g:ctrlp_working_path_mode = 'ra'
