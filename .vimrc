@@ -41,6 +41,9 @@ set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
 set guioptions-=L
 set guioptions-=R
 set guioptions-=r
+set guioptions-=m  "remove menu bar
+set guioptions-=T  "remove toolbar
+
 set guifont=Consolas\ 15
 set number
 set backspace=2
