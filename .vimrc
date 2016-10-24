@@ -41,7 +41,10 @@ set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
 set guioptions-=L
 set guioptions-=R
 set guioptions-=r
-set guifont=Consolas\ 13
+set guioptions-=m  "remove menu bar
+set guioptions-=T  "remove toolbar
+
+set guifont=Consolas\ 15
 set number
 set backspace=2
 set clipboard=unnamed
@@ -50,6 +53,7 @@ imap <C-BS> <C-W>
 
 " ycm
 let g:ycm_server_python_interpreter = '/usr/bin/python'
+autocmd CompleteDone * pclose
 
 "ctrlp
 let g:ctrlp_working_path_mode = 'ra'
@@ -68,3 +72,4 @@ map <F9> <Plug>(easymotion-bd-f)
 map <F10> <Plug>(easymotion-bd-jk)
 map <F2> :NERDTreeToggle<CR>
 nnoremap <F12> :YcmCompleter GoTo<CR>
+nnoremap <C-t> :tabnew<CR>
