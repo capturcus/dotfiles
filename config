@@ -116,8 +116,8 @@ workspace 6 output eDP1
 bindsym $mod+l exec /home/dzastin/scripts/.i3lock.sh
 
 # volume
-bindsym $mod+Prior exec /home/dzastin/scripts/volumeup.sh
-bindsym $mod+Next exec /home/dzastin/scripts/volumedown.sh
+bindsym $mod+Prior exec /home/marcin/scripts/volumeup.sh
+bindsym $mod+Next exec /home/marcin/scripts/volumedown.sh
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1
@@ -130,6 +130,9 @@ bindsym $mod+Shift+7 move container to workspace 7
 bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
+
+new_window pixel 2
+hide_edge_borders both
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -169,3 +172,7 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status
 }
+
+exec compton -b --config ~/.config/compton.conf
+
+exec --no-startup-id hsetroot -solid "#000000"
