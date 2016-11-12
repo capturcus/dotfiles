@@ -16,6 +16,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'tell-k/vim-autopep8'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'bitc/vim-hdevtools'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -37,14 +38,14 @@ syntax on
 colorscheme Monokai
 set encoding=utf-8
 setglobal fileencoding=utf-8
-set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
+set tabstop=8 softtabstop=0 expandtab shiftwidth=8 smarttab
 set guioptions-=L
 set guioptions-=R
 set guioptions-=r
 set guioptions-=m  "remove menu bar
 set guioptions-=T  "remove toolbar
 
-set guifont=Consolas\ 15
+set guifont=Hack\ 12
 set number
 set backspace=2
 set clipboard=unnamed
@@ -67,6 +68,7 @@ let g:syntastic_check_on_wq = 0
 
 let g:syntastic_python_flake8_post_args='--ignore=E501,E402,E401'
 
+au FileType haskell nnoremap <buffer> <F6> :HdevtoolsType<CR>
 map <F7> :bro old<CR>
 map <F9> <Plug>(easymotion-bd-f)
 map <F10> <Plug>(easymotion-bd-jk)
