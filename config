@@ -113,11 +113,11 @@ workspace 1 output HDMI1
 workspace 6 output eDP1
 
 # screen lock
-bindsym $mod+l exec /home/dzastin/scripts/.i3lock.sh
+bindsym $mod+l exec {{home}}/scripts/.i3lock.sh
 
 # volume
-bindsym $mod+Prior exec /home/marcin/scripts/volumeup.sh
-bindsym $mod+Next exec /home/marcin/scripts/volumedown.sh
+bindsym $mod+Prior exec {{home}}/scripts/volumeup.sh
+bindsym $mod+Next exec {{home}}/scripts/volumedown.sh
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1

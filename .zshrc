@@ -19,7 +19,8 @@ alias install='sudo apt-get install'
 
 setxkbmap pl
 
-PATH=$PATH:/home/marcin/scripts:/opt/arm/bin
+export GOPATH=~/gopath
+PATH=$PATH:{{home}}/scripts:/opt/arm/bin:{{home}}/.cabal/bin:/usr/local/share/scala/bin:/usr/local/share/spark/bin:$GOPATH/bin
 
 setopt autocd 
 
@@ -42,8 +43,4 @@ setopt hist_ignore_dups # ignore duplication command history list
 setopt hist_ignore_space
 setopt hist_verify
 setopt inc_append_history
-
-
-if [ $(tty) = "/dev/tty1" ]; then
-	startx
-fi
+setopt rm_star_silent
