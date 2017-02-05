@@ -48,7 +48,7 @@ set guioptions-=T  "remove toolbar
 set guifont=Hack\ 12
 set number
 set backspace=2
-set clipboard=unnamed
+set clipboard=unnamedplus
 set ff=unix
 imap <C-BS> <C-W>
 
