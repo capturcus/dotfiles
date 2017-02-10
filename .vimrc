@@ -17,6 +17,11 @@ Plugin 'easymotion/vim-easymotion'
 Plugin 'tell-k/vim-autopep8'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'bitc/vim-hdevtools'
+Plugin 'raichoo/purescript-vim'
+Plugin 'FrigoEU/psc-ide-vim'
+Plugin 'ianks/vim-tsx'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'mxw/vim-jsx'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -38,7 +43,7 @@ syntax on
 colorscheme Monokai
 set encoding=utf-8
 setglobal fileencoding=utf-8
-set tabstop=8 softtabstop=0 expandtab shiftwidth=8 smarttab
+set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
 set guioptions-=L
 set guioptions-=R
 set guioptions-=r
@@ -58,6 +63,7 @@ autocmd CompleteDone * pclose
 
 "ctrlp
 let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_cmd = 'CtrlPMixed'
 
 "syntastic
 set statusline=
@@ -65,8 +71,14 @@ let g:syntastic_always_populate_loc_list = 0
 let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let g:syntastic_typescript_checkers = ['tslint']
+"let g:syntastic_html_checkers = ['jshint']
+let g:syntastic_javascript_checkers = ['eslint']
 
 let g:syntastic_python_flake8_post_args='--ignore=E501,E402,E401'
+
+" purescript
+let g:psc_ide_server_port = 9753
 
 au FileType haskell nnoremap <buffer> <F6> :HdevtoolsType<CR>
 map <F7> :bro old<CR>
@@ -75,3 +87,12 @@ map <F10> <Plug>(easymotion-bd-jk)
 map <F2> :NERDTreeToggle<CR>
 nnoremap <F12> :YcmCompleter GoTo<CR>
 nnoremap <C-t> :tabnew<CR>
+
+function! s:DiffWithSaved()
+  let filetype=&ft
+  diffthis
+  vnew | r # | normal! 1Gdd
+  diffthis
+  exe "setlocal bt=nofile bh=wipe nobl noswf ro ft=" . filetype
+endfunction
+com! DiffSaved call s:DiffWithSaved()

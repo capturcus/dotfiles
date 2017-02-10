@@ -16,7 +16,7 @@ alias gd='git diff'
 alias gp='git push'
 alias grepr='grep --color=auto -RHIn'
 alias pss='ps aux|grep'
-alias install='sudo apt-get install'
+alias install='sudo apt install'
 alias sysupd='sudo apt update && sudo apt dist-upgrade -y && sudo apt autoremove -y'
 
 setxkbmap pl
@@ -30,6 +30,18 @@ setopt autocd
 function chpwd() {
     emulate -LR zsh
     ls
+}
+
+function wp {
+    echo `pwd` > /var/lib/path/p$1
+}
+
+function rp {
+    cd `cat /var/lib/path/p$1`
+}
+
+function pp {
+    cat /var/lib/path/p$1
 }
 
 #if [ "$TMUX" = "" ]; then tmux; fi

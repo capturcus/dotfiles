@@ -110,7 +110,15 @@ bindsym $mod+End workspace next
 
 # workspace setup
 workspace 1 output HDMI1
+workspace 2 output HDMI1
+workspace 3 output HDMI1
+workspace 4 output HDMI1
+workspace 5 output HDMI1
 workspace 6 output eDP1
+workspace 7 output eDP1
+workspace 8 output eDP1
+workspace 9 output eDP1
+workspace 10 output eDP1
 
 # screen lock
 bindsym $mod+l exec {{home}}/scripts/.i3lock.sh
