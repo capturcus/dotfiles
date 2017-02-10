@@ -123,6 +123,8 @@ workspace 10 output eDP1
 # screen lock
 bindsym $mod+l exec {{home}}/scripts/.i3lock.sh
 
+bindsym $mod+x exec {{home}}/scripts/fixwindows.sh
+
 # volume
 bindsym $mod+Prior exec {{home}}/scripts/volumeup.sh
 bindsym $mod+Next exec {{home}}/scripts/volumedown.sh
@@ -184,3 +186,11 @@ bar {
 exec ~/scripts/runcompton.sh
 
 exec --no-startup-id hsetroot -solid "#000000"
+
+{% if host == "dolinex" %}
+exec ~/scripts/worklayout
+
+exec google-chrome --new-window http://youtube.com
+exec google-chrome --new-window http://localhost
+exec google-chrome --new-window http://dskuw.slack.com
+{% endif %}

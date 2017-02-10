@@ -44,7 +44,9 @@ function pp {
     cat /var/lib/path/p$1
 }
 
-#if [ "$TMUX" = "" ]; then tmux; fi
+if [ $(tty) = "/dev/tty1" ]; then
+    startx
+fi
 
 HISTFILE=~/.zsh_history
 SAVEHIST=999999999
