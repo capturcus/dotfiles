@@ -16,7 +16,7 @@ alias gd='git diff'
 alias gp='git push'
 alias grepr='grep --color=auto -RHIn'
 alias pss='ps aux|grep'
-alias install='sudo apt install'
+alias install='sudo apt install -y'
 alias sysupd='sudo apt update && sudo apt dist-upgrade -y && sudo apt autoremove -y'
 
 setxkbmap pl
