@@ -55,6 +55,8 @@ set number
 set backspace=2
 set clipboard=unnamedplus
 set ff=unix
+set incsearch
+set hlsearch
 imap <C-BS> <C-W>
 
 " ycm
