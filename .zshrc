@@ -18,6 +18,7 @@ alias grepr='grep --color=auto -RHIn'
 alias pss='ps aux|grep'
 alias install='sudo apt install -y'
 alias sysupd='sudo apt update && sudo apt dist-upgrade -y && sudo apt autoremove -y'
+alias rrm='rm -rf'
 
 setxkbmap pl
 
