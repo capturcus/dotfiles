@@ -61,5 +61,5 @@ setopt hist_ignore_space
 setopt hist_verify
 setopt inc_append_history
 setopt rm_star_silent
-export NVM_DIR="/home/dzastin/.nvm"
+export NVM_DIR="{{home}}/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
