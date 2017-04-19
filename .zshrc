@@ -21,6 +21,10 @@ alias purge='sudo apt purge -y'
 alias sysupd='sudo apt update && sudo apt dist-upgrade -y && sudo apt autoremove -y'
 alias rrm='rm -rf'
 
+{% if host == "dolinex" %}
+alias c0='rp sc && godo -w'
+{% endif %}
+
 setxkbmap pl
 
 export GOPATH=~/gopath
