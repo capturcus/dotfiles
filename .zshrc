@@ -21,10 +21,19 @@ alias purge='sudo apt purge -y'
 alias sysupd='sudo apt update && sudo apt dist-upgrade -y && sudo apt autoremove -y'
 alias rrm='rm -rf'
 
+{% if host == "dolinex" %}
+alias c0='rp sc && godo -w'
+alias c1='rp scf && go build && ./storage-fulltext'
+alias c2='rp ss && bee run'
+alias c3='rp ssf && npm start'
+alias c4='docd -addr 0.0.0.0:5008'
+alias c5='cd ~/Downloads/dynamo && java -Djava.library.path=./DynamoDBLocal_lib -jar DynamoDBLocal.jar -sharedDb -port 5009'
+{% endif %}
+
 setxkbmap pl
 
 export GOPATH=~/gopath
-PATH=$PATH:{{home}}/scripts:/opt/arm/bin:{{home}}/.cabal/bin:/usr/local/share/scala/bin:/usr/local/share/spark/bin:$GOPATH/bin:/usr/local/cuda/bin
+PATH=$PATH:{{home}}/scripts:/opt/arm/bin:{{home}}/.cabal/bin:/usr/local/share/scala/bin:/usr/local/share/spark/bin:$GOPATH/bin:{{home}}/.local/bin/:/usr/local/cuda/bin
 
 setopt autocd 
 
