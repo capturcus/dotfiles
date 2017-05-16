@@ -24,7 +24,7 @@ alias rrm='rm -rf'
 setxkbmap pl
 
 export GOPATH=~/gopath
-PATH=$PATH:{{home}}/scripts:/opt/arm/bin:{{home}}/.cabal/bin:/usr/local/share/scala/bin:/usr/local/share/spark/bin:$GOPATH/bin
+PATH=$PATH:{{home}}/scripts:/opt/arm/bin:{{home}}/.cabal/bin:/usr/local/share/scala/bin:/usr/local/share/spark/bin:$GOPATH/bin:/usr/local/cuda/bin
 
 setopt autocd 
 
