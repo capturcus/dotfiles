@@ -22,7 +22,7 @@ alias sysupd='sudo apt update && sudo apt dist-upgrade -y && sudo apt autoremove
 alias rrm='rm -rf'
 
 {% if host == "dolinex" %}
-alias c0='rp sc && godo -w'
+alias c0='sudo service mongod start && rp sc && godo -w'
 alias c1='rp scf && go build && ./storage-fulltext'
 alias c2='rp ss && bee run'
 alias c3='rp ssf && npm start'
