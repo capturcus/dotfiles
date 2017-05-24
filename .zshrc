@@ -33,7 +33,8 @@ alias c5='cd ~/Downloads/dynamo && java -Djava.library.path=./DynamoDBLocal_lib 
 setxkbmap pl
 
 export GOPATH=~/gopath
-PATH=$PATH:{{home}}/scripts:/opt/arm/bin:{{home}}/.cabal/bin:/usr/local/share/scala/bin:/usr/local/share/spark/bin:$GOPATH/bin:{{home}}/.local/bin/:/usr/local/cuda/bin
+PATH=$PATH:{{home}}/scripts:/opt/arm/bin:{{home}}/.cabal/bin:/usr/local/share/scala/bin:/usr/local/share/spark/bin:$GOPATH/bin:{{home}}/.local/bin/:/usr/local/cuda/bin:/usr/local/go/bin
+
 
 setopt autocd 
 
