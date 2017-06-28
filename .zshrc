@@ -73,4 +73,7 @@ setopt hist_verify
 setopt inc_append_history
 setopt rm_star_silent
 export NVM_DIR="{{home}}/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+function loadnvm {
+    echo "loading nvm"
+    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+}
