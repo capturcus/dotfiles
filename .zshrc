@@ -22,7 +22,6 @@ alias sysupd='sudo apt update && sudo apt dist-upgrade -y && sudo apt autoremove
 alias rrm='rm -rf'
 
 {% if host == "dolinex" %}
-alias c0='sudo service mongod start && rp sc && godo -w'
 alias c1='rp scf && godo -w'
 alias c2='rp ss && bee run'
 alias c3='rp ssf && npm start'
@@ -76,4 +75,16 @@ export NVM_DIR="{{home}}/.nvm"
 function loadnvm {
     echo "loading nvm"
     [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+}
+
+function c0 {
+    dead=`service mongod status`
+    deadgrepped=`echo $dead|grep dead`
+    if [[ -z "${deadgrepped// }" ]]; then
+        echo "mongo not dead"
+    else
+        echo "mongo dead"
+        sudo service mongo start
+    fi
+    rp sc && godo -w
 }
