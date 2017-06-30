@@ -84,7 +84,7 @@ function c0 {
         echo "mongo not dead"
     else
         echo "mongo dead"
-        sudo service mongo start
+        sudo service mongod start
     fi
     rp sc && godo -w
 }
