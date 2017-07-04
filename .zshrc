@@ -23,7 +23,7 @@ alias rrm='rm -rf'
 
 {% if host == "dolinex" %}
 alias c1='rp scf && godo -w'
-alias c2='rp ss && bee run'
+alias c2='rp ss && godo -w'
 alias c3='loadnvm && rp ssf && npm start'
 alias c4='docd -addr 0.0.0.0:5008'
 alias c5='cd ~/Downloads/dynamo && java -Djava.library.path=./DynamoDBLocal_lib -jar DynamoDBLocal.jar -sharedDb -port 5009'
