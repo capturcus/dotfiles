@@ -20,6 +20,7 @@ alias install='sudo apt install -y'
 alias purge='sudo apt purge -y'
 alias sysupd='sudo apt update && sudo apt dist-upgrade -y && sudo apt autoremove -y'
 alias rrm='rm -rf'
+alias gitka='gitk --all'
 
 {% if host == "dolinex" %}
 alias c1='rp scf && godo -w'
