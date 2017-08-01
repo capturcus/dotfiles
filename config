@@ -188,11 +188,11 @@ exec ~/scripts/runcompton.sh
 
 exec --no-startup-id hsetroot -solid "#000000"
 
-exec google-chrome --new-window http://facebook.com
+exec iridium-browser --new-window http://facebook.com
 
 {% if host == "dolinex" %}
 exec ~/scripts/worklayout
 
-exec google-chrome --new-window http://localhost
-exec google-chrome --new-window http://dskuw.slack.com
+exec iridium-browser --new-window http://localhost
+exec iridium-browser --new-window http://dskuw.slack.com
 {% endif %}
