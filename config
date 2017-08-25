@@ -196,3 +196,5 @@ exec ~/scripts/worklayout
 exec iridium-browser --new-window http://localhost
 exec iridium-browser --new-window http://dskuw.slack.com
 {% endif %}
+
+exec {{home}}/scripts/.i3lock.sh
