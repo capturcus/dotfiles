@@ -188,13 +188,13 @@ exec ~/scripts/runcompton.sh
 
 exec --no-startup-id hsetroot -solid "#000000"
 
-exec iridium-browser --new-window http://facebook.com
+exec firefox http://facebook.com
 
 {% if host == "dolinex" %}
 exec ~/scripts/worklayout
 
-exec iridium-browser --new-window http://localhost
-exec iridium-browser --new-window http://dskuw.slack.com
+exec firefox http://localhost
+exec firefox http://dskuw.slack.com
 {% endif %}
 
 exec {{home}}/scripts/.i3lock.sh
