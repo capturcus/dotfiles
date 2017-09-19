@@ -35,6 +35,9 @@ setxkbmap pl
 export GOPATH=~/gopath
 PATH=$PATH:{{home}}/scripts:/opt/arm/bin:{{home}}/.cabal/bin:/usr/local/share/scala/bin:/usr/local/share/spark/bin:$GOPATH/bin:{{home}}/.local/bin/:/usr/local/cuda/bin:/usr/local/go/bin
 
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 setopt autocd 
 
