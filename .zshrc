@@ -29,14 +29,14 @@ alias c4='docd -addr 0.0.0.0:5008'
 alias c5='cd ~/Downloads/dynamo && java -Djava.library.path=./DynamoDBLocal_lib -jar DynamoDBLocal.jar -sharedDb -port 5009'
 {% endif %}
 
+{% if host == "flondra" %}
+alias ftl=`cd FTL\ Faster\ Than\ Light && ./FTL`
+{% endif %}
+
 setxkbmap pl
 
 export GOPATH=~/gopath
 PATH=$PATH:{{home}}/scripts:/opt/arm/bin:{{home}}/.cabal/bin:/usr/local/share/scala/bin:/usr/local/share/spark/bin:$GOPATH/bin:{{home}}/.local/bin/:/usr/local/cuda/bin:/usr/local/go/bin
-
-{% if host == "flondra" %}
-PATH=$PATH:~/FTL\ Faster\ Than\ Light
-{% endif %}
 
 setopt autocd 
 
