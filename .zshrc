@@ -20,13 +20,13 @@ alias install='sudo apt install -y'
 alias purge='sudo apt purge -y'
 alias sysupd='sudo apt update && sudo apt dist-upgrade -y && sudo apt autoremove -y'
 alias rrm='rm -rf'
+alias gitka='gitk --all'
 
 {% if host == "dolinex" %}
 alias c1='rp scf && godo -w'
-alias c2='rp ss && bee run'
-alias c3='loadnvm && rp ssf && npm start'
+alias c2='rp ab && godo -w'
+alias c3='loadnvm && rp af && npm start'
 alias c4='docd -addr 0.0.0.0:5008'
-alias c5='cd ~/Downloads/dynamo && java -Djava.library.path=./DynamoDBLocal_lib -jar DynamoDBLocal.jar -sharedDb -port 5009'
 {% endif %}
 
 {% if host == "flondra" %}
@@ -37,6 +37,10 @@ setxkbmap pl
 
 export GOPATH=~/gopath
 PATH=$PATH:{{home}}/scripts:/opt/arm/bin:{{home}}/.cabal/bin:/usr/local/share/scala/bin:/usr/local/share/spark/bin:$GOPATH/bin:{{home}}/.local/bin/:/usr/local/cuda/bin:/usr/local/go/bin
+
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 setopt autocd 
 
