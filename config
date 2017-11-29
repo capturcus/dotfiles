@@ -191,7 +191,7 @@ exec --no-startup-id hsetroot -solid "#000000"
 exec firefox http://facebook.com
 
 {% if host == "dolinex" %}
-exec ~/scripts/worklayout
+exec /home/dzastin/scripts/worklayout
 
 exec firefox http://localhost
 exec firefox http://dskuw.slack.com
