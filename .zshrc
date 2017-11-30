@@ -85,7 +85,7 @@ function loadnvm {
 }
 
 function c0 {
-    dead=`service mongod status`
+    dead=`service mongodb status`
     deadgrepped=`echo $dead|grep dead`
     if [[ -z "${deadgrepped// }" ]]; then
         echo "mongo not dead"
