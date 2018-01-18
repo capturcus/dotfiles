@@ -193,6 +193,8 @@ exec firefox
 {% if host == "dolinex" %}
 exec ~/scripts/worklayout
 
-{% endif %}
+{% else %}
 
 exec {{home}}/scripts/.i3lock.sh
+
+{% endif %}
