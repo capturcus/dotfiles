@@ -22,6 +22,7 @@ alias sysupd='sudo apt update && sudo apt dist-upgrade -y && sudo apt autoremove
 alias rrm='rm -rf'
 alias gitka='gitk --all'
 alias cpr='cp -r'
+alias lns='loadnvm && npm start'
 
 {% if host == "dolinex" %}
 alias c1='rp scf && godo -w'
