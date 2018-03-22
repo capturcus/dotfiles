@@ -197,4 +197,8 @@ exec firefox http://localhost
 exec firefox http://dskuw.slack.com
 {% endif %}
 
+{% if host == "sardynka" %}
+exec pavucontrol
+{% endif %}
+
 exec {{home}}/scripts/.i3lock.sh
