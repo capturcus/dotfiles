@@ -24,6 +24,7 @@ alias rrm='rm -rf'
 alias gitka='gitk --all'
 alias cpr='cp -r'
 alias lns='loadnvm && npm start'
+alias tlpn='sudo netstat -tlpn'
 
 {% if host == "dolinex" %}
 alias c1='rp scf && godo -w'
