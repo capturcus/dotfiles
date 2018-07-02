@@ -23,7 +23,7 @@ alias sysupd='sudo apt update && sudo apt dist-upgrade -y && sudo apt autoremove
 alias rrm='rm -rf'
 alias rrrm='sudo rm -rf'
 alias gitka='gitk --all'
-alias cpr='cp -r'
+alias ccp='cp -r'
 alias lns='loadnvm && npm start'
 alias tlpn='sudo netstat -tlpn'
 
