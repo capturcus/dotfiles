@@ -32,6 +32,8 @@ alias c1='rp scf && godo -w'
 alias c2='rp ab && godo -w'
 alias c3='loadnvm && rp af && npm start'
 alias c4='docd -addr 0.0.0.0:5008'
+
+alias gimp='rq flatpak run org.gimp.GIMP//stable'
 {% endif %}
 
 {% if host == "flondra" %}
