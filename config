@@ -190,15 +190,14 @@ exec --no-startup-id hsetroot -solid "#000000"
 
 exec firefox
 
+exec i3lock -c 000000
+
 {% if host == "dolinex" %}
 exec ~/scripts/worklayout
-
 {% else %}
 
 {% if host == "sardynka" %}
 exec pavucontrol
 {% endif %}
-
-exec i3lock -c 000000
 
 {% endif %}
