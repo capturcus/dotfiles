@@ -194,6 +194,7 @@ exec i3lock -c 000000
 
 {% if host == "dolinex" %}
 exec ~/scripts/worklayout
+xinput set-prop 13 146 0.500000, 0.000000, 0.000000, 0.000000, 0.500000, 0.000000, 0.000000, 0.000000, 1.00000
 {% else %}
 
 {% if host == "sardynka" %}
