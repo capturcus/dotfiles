@@ -62,7 +62,7 @@ function wp {
 }
 
 function rp {
-    cd `cat /var/lib/path/p$1`
+    cd "`cat /var/lib/path/p$1`"
 }
 
 function pp {
