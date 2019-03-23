@@ -110,6 +110,8 @@ bindsym $mod+Delete workspace prev
 bindsym $mod+End workspace next
 
 # workspace setup
+
+{% if host == "dolinex" %}
 workspace 1 output HDMI-1
 workspace 2 output HDMI-1
 workspace 3 output HDMI-1
@@ -120,6 +122,20 @@ workspace 7 output eDP-1
 workspace 8 output eDP-1
 workspace 9 output eDP-1
 workspace 10 output eDP-1
+{% endif %}
+
+{% if host == "sardynka" %}
+workspace 1 output DVI-I-0
+workspace 2 output DVI-I-0
+workspace 3 output DVI-I-0
+workspace 4 output DVI-I-0
+workspace 5 output DVI-I-0
+workspace 6 output DVI-I-1
+workspace 7 output DVI-I-1
+workspace 8 output DVI-I-1
+workspace 9 output DVI-I-1
+workspace 10 output DVI-I-1
+{% endif %}
 
 # screen lock
 bindsym $mod+l exec i3lock -c 000000
