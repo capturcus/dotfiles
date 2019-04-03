@@ -188,7 +188,7 @@ exec ~/scripts/runcompton.sh
 
 exec --no-startup-id hsetroot -solid "#000000"
 
-exec firefox
+exec iridium-browser
 
 exec i3lock -c 000000
 
