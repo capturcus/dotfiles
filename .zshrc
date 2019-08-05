@@ -28,12 +28,6 @@ alias lns='loadnvm && npm start'
 alias tlpn='sudo netstat -tlpn'
 alias c.='code .'
 
-{% if host == "dolinex" %}
-alias c1='rp scf && godo -w'
-alias c2='rp ab && godo -w'
-alias c3='loadnvm && rp af && npm start'
-alias c4='docd -addr 0.0.0.0:5008'
-
 {% endif %}
 
 {% if host == "flondra" %}
