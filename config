@@ -202,7 +202,9 @@ bar {
 
 exec ~/scripts/runcompton.sh
 
+{% if host != "marcin-pc" %}
 exec --no-startup-id hsetroot -solid "#000000"
+{% endif %}
 
 exec iridium-browser
 
