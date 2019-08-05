@@ -28,8 +28,6 @@ alias lns='loadnvm && npm start'
 alias tlpn='sudo netstat -tlpn'
 alias c.='code .'
 
-{% endif %}
-
 {% if host == "flondra" %}
 alias ftl=`cd FTL\ Faster\ Than\ Light && ./FTL`
 {% endif %}
