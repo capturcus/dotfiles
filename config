@@ -204,11 +204,10 @@ exec ~/scripts/runcompton.sh
 
 {% if host != "marcin-pc" %}
 exec --no-startup-id hsetroot -solid "#000000"
+exec i3lock -c 000000
 {% endif %}
 
 exec iridium-browser
-
-exec i3lock -c 000000
 
 {% if host == "marcin-pc" %}
 exec ~/scripts/worklayout
