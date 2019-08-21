@@ -1,7 +1,7 @@
 urxvt*background:	black
 urxvt*foreground:	#cccccc
 urxvt*scrollBar:	false
-{% if host == "flondra" %}
+{% if host == "flondra" or host == "marcin-pc" %}
 urxvt*font:		xft:Hack:size=12
 {% else %}
 urxvt*font:		xft:Hack:size=15
