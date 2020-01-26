@@ -27,6 +27,7 @@ alias ccp='cp -r'
 alias lns='loadnvm && npm start'
 alias tlpn='sudo netstat -tlpn'
 alias c.='code .'
+alias gpicview='g'
 
 {% if host == "flondra" %}
 alias ftl=`cd FTL\ Faster\ Than\ Light && ./FTL`
